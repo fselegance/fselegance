@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>FS ÉLÉGANCE</title>
+   <style>
+     body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #main-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    #perfil-container {
+      max-width: 30%;
+    }
+
+    #perfil {
+      border-radius: 80%;
+      max-width: 100%;
+      margin: 0 auto;
+      display: inline-block;
+      border: 6px solid gold;
+    }
+
+    #bienvenida {
+      max-width: 60%;
+      margin: 20px;
+      color: #fff;
+      text-align: justify;
+    }
+
+    button {
+      background-color: #008080;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    #botones {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #botones a {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    #botones a img {
+      width: 40px;
+      height: 40px;
+    }
+
+   .productos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .producto {
+      border: 4px solid #ddd;
+      border-color: gold;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      width: calc(16.666% - 20px);
+      box-sizing: border-box;
+      position: relative;
+      text-align: center;
+    }
+
+    .producto-numero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px 0 0 0;
+    }
+
+    img.producto-imagen {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .pedido-btn {
+      display: block;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .producto {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LISTA DE PRODUCTOS</h1>
+  </header>
+
+  <div id="main-container">
+    <div id="perfil-container">
+      <img id="perfil" src="perfil.png" alt="Perfil">
+    </div>
+    <div id="bienvenida">
+      <h2>Bienvenidos a FS ÉLÉGANCE</h2>
+      <p>¡Estilo que habla por sí mismo! Descubre nuestro mundo de moda con piezas únicas que te harán destacar. Desde lo clásico hasta lo último en tendencias, cada prenda cuenta una historia de elegancia.</p>
+      <p>🛒 Explora, elige, deslumbra.</p>
+      <p>📸 Síguenos para inspiración diaria y ofertas exclusivas.</p>
+      <p>¡Únete a la revolución de la moda! 💫</p>
+
+      <button>
+        <a href="mailto:fselegance.oficial@gmail.com?subject=FS ÉLÉGANCE&body=¡Hola!%0D%0A%0D%0AMe intereso tu pagina fue una increíble experiencia en FS ÉLÉGANCE. Quiero saber más sobre tus productos..." style="text-decoration: none; color: #fff;">Compartir por correo electrónico</a>
+      </button>
+
+      <button>
+        <a href="tel:+51929321985" style="text-decoration: none; color: #fff;">Llámanos</a>
+      </button>
+    </div>
+
+    <!-- Social Links -->
+    <div id="botones">
+      <a href="https://www.facebook.com/fselegance04" target="_blank"><img src="facebook(1).png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/fselegance.oficial/" target="_blank"><img src="instagram%20(1).png" alt="Instagram"></a>
+    </div>
+  </div>
+    
+
+    <!-- Productos -->
+    <div class="productos-container">
+    <div class="producto" id="producto1">
+      <div class="producto-numero">1</div>
+      <img class="producto-imagen" src="POLO%201.jpg" alt="Producto 1">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('1')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto2">
+      <div class="producto-numero">2</div>
+      <img class="producto-imagen" src="POLO%202.jpg" alt="Producto 2">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('2')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto3">
+      <div class="producto-numero">3</div>
+      <img class="producto-imagen" src="POLO%203.jpg" alt="Producto 3">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('3')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto4">
+      <div class="producto-numero">4</div>
+      <img class="producto-imagen" src="POLO%204.jpg" alt="Producto 4">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('4')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto5">
+      <div class="producto-numero">5</div>
+      <img class="producto-imagen" src="POLO%205.jpg" alt="Producto 5">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('5')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    <div class="producto" id="producto6">
+      <div class="producto-numero">6</div>
+      <img class="producto-imagen" src="POLO%206.jpg" alt="Producto 6">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('6')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+  
+  
+  
+    <div class="productos-container">
+    
+    <div class="producto" id="producto7">
+      <div class="producto-numero">7</div>
+      <img class="producto-imagen" src="POLO%207.jpg" alt="Producto 7">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('7')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto8">
+      <div class="producto-numero">8</div>
+      <img class="producto-imagen" src="POLO%208.jpg" alt="Producto 8">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('8')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    <div class="producto" id="producto9">
+      <div class="producto-numero">9</div>
+      <img class="producto-imagen" src="POLO%209.jpg" alt="Producto 9">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('9')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto10">
+      <div class="producto-numero">10</div>
+      <img class="producto-imagen" src="POLO%2010.jpg" alt="Producto 10">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('10')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto11">
+      <div class="producto-numero">11</div>
+      <img class="producto-imagen" src="POLO%2011.jpg" alt="Producto 11">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('11')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto12">
+      <div class="producto-numero">12</div>
+      <img class="producto-imagen" src="POLO%2012.jpg" alt="Producto 12">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('12')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+
+  
+    <div class="productos-container">
+    <div class="producto" id="producto13">
+      <div class="producto-numero">13</div>
+      <img class="producto-imagen" src="POLO%2013.jpg" alt="Producto 13">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('13')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto14">
+      <div class="producto-numero">14</div>
+      <img class="producto-imagen" src="POLO%2014.jpg" alt="Producto 14">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('14')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto15">
+      <div class="producto-numero">15</div>
+      <img class="producto-imagen" src="POLO%2015.jpg" alt="Producto 15">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('15')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto16">
+      <div class="producto-numero">16</div>
+      <img class="producto-imagen" src="POLO%2016.jpg" alt="Producto 16">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('16')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+        <div class="producto" id="producto17">
+      <div class="producto-numero">17</div>
+      <img class="producto-imagen" src="POLO%2017.jpg" alt="Producto 17">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('17')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto18">
+      <div class="producto-numero">18</div>
+      <img class="producto-imagen" src="POLO%2018.jpg" alt="Producto 18">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('18')">Realizar Pedido por WhatsApp</a>
+    </div>
+  </div>
+  
+  
+      <div class="productos-container">
+    <div class="producto" id="producto19">
+      <div class="producto-numero">19</div>
+      <img class="producto-imagen" src="POLO%2019.jpg" alt="Producto 19">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('19')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto20">
+      <div class="producto-numero">20</div>
+      <img class="producto-imagen" src="POLO%2020.jpg" alt="Producto 20">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('20')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+    <div class="producto" id="producto21">
+      <div class="producto-numero">21</div>
+      <img class="producto-imagen" src="POLO%2021.jpg" alt="Producto 21">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('21')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto22">
+      <div class="producto-numero">22</div>
+      <img class="producto-imagen" src="POLO%2022.jpg" alt="Producto 22">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('22')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto23">
+      <div class="producto-numero">23</div>
+      <img class="producto-imagen" src="POLO%2023.jpg" alt="Producto 23">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('23')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto24">
+      <div class="producto-numero">24</div>
+      <img class="producto-imagen" src="POLO%2024.jpg" alt="Producto 24">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('24')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+   
+  </div>
+  
+  
+         <div class="productos-container">
+    <div class="producto" id="producto25">
+      <div class="producto-numero">25</div>
+      <img class="producto-imagen" src="POLO%2025.jpg" alt="Producto 25">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('25')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto26">
+      <div class="producto-numero">26</div>
+      <img class="producto-imagen" src="POLO%2026.jpg" alt="Producto 26">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('26')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto27">
+      <div class="producto-numero">27</div>
+      <img class="producto-imagen" src="POLO%2027.jpg" alt="Producto 27">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('27')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto28">
+      <div class="producto-numero">28</div>
+      <img class="producto-imagen" src="POLO%2028.jpg" alt="Producto 28">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('28')">Realizar Pedido por WhatsApp</a>
+      
+      
+    </div>
+      <div class="producto" id="producto29">
+      <div class="producto-numero">29</div>
+      <img class="producto-imagen" src="POLO%2029.jpg" alt="Producto 29">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('29')">Realizar Pedido por WhatsApp</a>
+    </div>
+     <div class="producto" id="producto30">
+      <div class="producto-numero">30</div>
+      <img class="producto-imagen" src="POLO%2030.jpg" alt="Producto 30">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('30')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+  
+  
+    <div class="productos-container">
+    <div class="producto" id="producto31">
+      <div class="producto-numero">31</div>
+      <img class="producto-imagen" src="POLO%2031.jpg" alt="Producto 31">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('31')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto32">
+      <div class="producto-numero">32</div>
+      <img class="producto-imagen" src="POLO%2032.jpg" alt="Producto 32">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('32')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto33">
+      <div class="producto-numero">33</div>
+      <img class="producto-imagen" src="POLO%2033.jpg" alt="Producto 33">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('33')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto34">
+      <div class="producto-numero">34</div>
+      <img class="producto-imagen" src="POLO%2034.jpg" alt="Producto 34">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('34')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto35">
+      <div class="producto-numero">35</div>
+      <img class="producto-imagen" src="POLO%2035.jpg" alt="Producto 35">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('35')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    <div class="producto" id="producto36">
+      <div class="producto-numero">36</div>
+      <img class="producto-imagen" src="POLO%2036.jpg" alt="Producto 36">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('36')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+  
+  
+  
+    <div class="productos-container">
+    
+    <div class="producto" id="producto37">
+      <div class="producto-numero">37</div>
+      <img class="producto-imagen" src="POLO%2037.jpg" alt="Producto 37">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('37')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto38">
+      <div class="producto-numero">38</div>
+      <img class="producto-imagen" src="POLO%2038.jpg" alt="Producto 38">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('38')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    <div class="producto" id="producto39">
+      <div class="producto-numero">39</div>
+      <img class="producto-imagen" src="POLO%2039.jpg" alt="Producto 39">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('39')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto40">
+      <div class="producto-numero">40</div>
+      <img class="producto-imagen" src="POLO%2040.jpg" alt="Producto 40">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('40')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto41">
+      <div class="producto-numero">41</div>
+      <img class="producto-imagen" src="POLO%2041.jpg" alt="Producto 41">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('41')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto42">
+      <div class="producto-numero">42</div>
+      <img class="producto-imagen" src="POLO%2042.jpg" alt="Producto 42">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('42')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+
+  
+    <div class="productos-container">
+    <div class="producto" id="producto43">
+      <div class="producto-numero">43</div>
+      <img class="producto-imagen" src="POLO%2043.jpg" alt="Producto 43">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('43')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto44">
+      <div class="producto-numero">44</div>
+      <img class="producto-imagen" src="POLO%2044.jpg" alt="Producto 44">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('44')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto45">
+      <div class="producto-numero">45</div>
+      <img class="producto-imagen" src="POLO%2045.jpg" alt="Producto 45">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('45')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto46">
+      <div class="producto-numero">46</div>
+      <img class="producto-imagen" src="POLO%2046.jpg" alt="Producto 46">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('46')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+        <div class="producto" id="producto47">
+      <div class="producto-numero">47</div>
+      <img class="producto-imagen" src="POLO%2047.jpg" alt="Producto 47">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('47')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto48">
+      <div class="producto-numero">48</div>
+      <img class="producto-imagen" src="POLO%2048.jpg" alt="Producto 48">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('48')">Realizar Pedido por WhatsApp</a>
+    </div>
+  </div>
+  
+  
+      <div class="productos-container">
+    <div class="producto" id="producto49">
+      <div class="producto-numero">49</div>
+      <img class="producto-imagen" src="POLO%2049.jpg" alt="Producto 49">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('49')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto50">
+      <div class="producto-numero">50</div>
+      <img class="producto-imagen" src="POLO%2050.jpg" alt="Producto 50">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('50')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+    <div class="producto" id="producto51">
+      <div class="producto-numero">51</div>
+      <img class="producto-imagen" src="POLO%2051.jpg" alt="Producto 51">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('51')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto52">
+      <div class="producto-numero">52</div>
+      <img class="producto-imagen" src="POLO%2052.jpg" alt="Producto 52">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('52')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto53">
+      <div class="producto-numero">53</div>
+      <img class="producto-imagen" src="POLO%2053.jpg" alt="Producto 53">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('53')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto54">
+      <div class="producto-numero">54</div>
+      <img class="producto-imagen" src="POLO%2054.jpg" alt="Producto 54">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('54')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+   
+  </div>
+  
+  
+         <div class="productos-container">
+    <div class="producto" id="producto55">
+      <div class="producto-numero">55</div>
+      <img class="producto-imagen" src="POLO%2055.jpg" alt="Producto 55">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('55')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto56">
+      <div class="producto-numero">56</div>
+      <img class="producto-imagen" src="POLO%2056.jpg" alt="Producto 56">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('56')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto57">
+      <div class="producto-numero">57</div>
+      <img class="producto-imagen" src="POLO%2057.jpg" alt="Producto 57">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('57')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto58">
+      <div class="producto-numero">58</div>
+      <img class="producto-imagen" src="POLO%2058.jpg" alt="Producto 58">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('58')">Realizar Pedido por WhatsApp</a>
+      
+      
+    </div>
+      <div class="producto" id="producto59">
+      <div class="producto-numero">59</div>
+      <img class="producto-imagen" src="POLO%2059.jpg" alt="Producto 59">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('59')">Realizar Pedido por WhatsApp</a>
+    </div>
+     <div class="producto" id="producto60">
+      <div class="producto-numero">60</div>
+      <img class="producto-imagen" src="POLO%2060.jpg" alt="Producto 60">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('60')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+
+  
+         <div class="productos-container">
+    <div class="producto" id="producto61">
+      <div class="producto-numero">61</div>
+      <img class="producto-imagen" src="POLO%2061.jpg" alt="Producto 61">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('61')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto62">
+      <div class="producto-numero">62</div>
+      <img class="producto-imagen" src="POLO%2062.jpg" alt="Producto 62">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('62')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+    
+    <div class="producto" id="producto63">
+      <div class="producto-numero">63</div>
+      <img class="producto-imagen" src="POLO%2063.jpg" alt="Producto 63">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('63')">Realizar Pedido por WhatsApp</a>
+    </div>
+    
+     <div class="producto" id="producto64">
+      <div class="producto-numero">64</div>
+      <img class="producto-imagen" src="POLO%2064.jpg" alt="Producto 64">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('64')">Realizar Pedido por WhatsApp</a>
+      
+      
+    </div>
+      <div class="producto" id="producto65">
+      <div class="producto-numero">65</div>
+      <img class="producto-imagen" src="POLO%2065.jpg" alt="Producto 65">
+      <h2>POLO  ALGODON OVERSIZE</h2>
+      <p>VARIEDAD EN COLORES </p>
+      <p>Tallas: S, M, L</p>
+      <p>Precio: S/38.00</p>
+      <a href="javascript:void(0);" class="pedido-btn" onclick="realizarPedido('65')">Realizar Pedido por WhatsApp</a>
+    </div>
+
+  </div>
+
+
+  
+
+    
+  <script>
+    function realizarPedido(numeroProducto) {
+      var mensaje = "Hola, me interesa el polo " + numeroProducto;
+      var url = "https://wa.me/51929321985?text=" + encodeURIComponent(mensaje);
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
