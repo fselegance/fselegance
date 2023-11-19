@@ -903,17 +903,21 @@
   </div>
 
   <script>
-   // Simular clic después de que la página se carga completamente
+   var sonidoReproducido = false;
+
+    // Reproducir audio después de que la página se carga completamente
     document.addEventListener('DOMContentLoaded', function() {
       document.body.click();
     });
 
-    // Reproducir audio después de clic simulado
+    // Reproducir audio después de clic simulado (solo si no se ha reproducido antes)
     document.body.addEventListener('click', function() {
-      var audio = new Audio('sinido.mp3');
-      audio.play();
+      if (!sonidoReproducido) {
+        var audio = new Audio('sinido.mp3');
+        audio.play();
+        sonidoReproducido = true;
+      }
     });
-
 
     function realizarPedido(numeroProducto) {
       var mensaje = "Hola, me interesa el polo " + numeroProducto;
