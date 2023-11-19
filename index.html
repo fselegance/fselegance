@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>FS ÉLÉGANCE</title>
-   <style>
+  <style>
      body {
-      font-family: Arial, sans-serif;
+      font-family: 'Nombre de tu fuente', Arial, sans-serif;
       background-color: #000;
       margin: 0;
       padding: 0;
@@ -17,10 +17,18 @@
     header {
       text-align: center;
       background-color: #000;
-      color: #fff;
       padding: 10px;
       position: relative;
       overflow: hidden;
+    }
+
+    h1 {
+      color: gold; /* Cambia el color de las letras a dorado */
+      font-family: 'Tu fuente francesa', inherit; /* Agrega la fuente francesa aquí */
+      display: inline-block;
+      padding: 10px;
+      border: 2px solid #fff; /* Cambia el color del borde a blanco */
+      border-radius: 5px;
     }
 
     #main-container {
@@ -40,6 +48,7 @@
       margin: 0 auto;
       display: inline-block;
       border: 6px solid gold;
+      animation: girarPerfil 5s linear infinite;
     }
 
     #bienvenida {
@@ -76,7 +85,7 @@
       height: 40px;
     }
 
-   .productos-container {
+    .productos-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -128,6 +137,26 @@
         width: 100%;
       }
     }
+
+    @keyframes abrirPagina {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes girarPerfil {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -141,7 +170,7 @@
       <img id="perfil" src="perfil.png" alt="Perfil">
     </div>
     <div id="bienvenida">
-      <h2>BIENVENIDOS A FS ÉLÉGANCE Vestimos tu estilo....</h2>
+      <h2>BIENVENIDOS A FS ÉLÉGANCE estimamos tu estilo....</h2>
       <p>¡Estilo que habla por sí mismo! Descubre nuestro mundo de moda con piezas únicas que te harán destacar. Desde lo clásico hasta lo último en tendencias, cada prenda cuenta una historia de elegancia.</p>
       <p>🛒 Explora, elige, deslumbra.</p>
       <p>📸 Síguenos para inspiración diaria y ofertas exclusivas.</p>
@@ -152,20 +181,17 @@
       </button>
 
       <button onclick="window.location.href='tel:+51929321985'">
-    <a href="tel:+51929321985" style="text-decoration: none; color: #fff;">Llámanos</a>
-</button>
+        <a href="tel:+51929321985" style="text-decoration: none; color: #fff;">Llámanos</a>
+      </button>
 
-      
-       <div id="botones">
-    <a href="https://www.facebook.com/fselegance04" target="_blank"><img src="facebook(1).png" alt="Facebook" style="width: 90px; height: 90px;"></a>
-    <a href="https://www.instagram.com/fselegance.oficial/" target="_blank"><img src="instagram%20(1).png" alt="Instagram" style="width: 90px; height: 90px;"></a>
-</div>
+      <div id="botones">
+        <a href="https://www.facebook.com/fselegance04" target="_blank"><img src="facebook(1).png" alt="Facebook" style="width: 90px; height: 90px;"></a>
+        <a href="https://www.instagram.com/fselegance.oficial/" target="_blank"><img src="instagram%20(1).png" alt="Instagram" style="width: 90px; height: 90px;"></a>
+      </div>
     </div>
-   
-
   </div>
-    
-
+  
+  
     <!-- Productos -->
     <div class="productos-container">
     <div class="producto" id="producto1">
@@ -876,11 +902,19 @@
 
   </div>
 
-
-  
-
-    
   <script>
+   // Simular clic después de que la página se carga completamente
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.click();
+    });
+
+    // Reproducir audio después de clic simulado
+    document.body.addEventListener('click', function() {
+      var audio = new Audio('sinido.mp3');
+      audio.play();
+    });
+
+
     function realizarPedido(numeroProducto) {
       var mensaje = "Hola, me interesa el polo " + numeroProducto;
       var url = "https://wa.me/51929321985?text=" + encodeURIComponent(mensaje);
